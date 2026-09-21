@@ -16,7 +16,7 @@ struct FetchedObjects<T, Content>: View where T : NSManagedObject, Content : Vie
   ) {
     self.content = content
     self.request = FetchRequest(
-      entity: T.entity(),
+        entity: T.entity(),
       sortDescriptors: sortDescriptors,
       predicate: predicate
     )

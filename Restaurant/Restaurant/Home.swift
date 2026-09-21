@@ -8,25 +8,14 @@
 import SwiftUI
 
 struct Home: View {
-    let persistence = PersistenceController()
+//    let persistence = PersistenceController()
     
     var body: some View {
-        TabView {
-            Tab() {
-                Menu()
-                    .environment(\.managedObjectContext, persistence.container.viewContext)
-                    .tabItem {
-                        Label("Menu", systemImage: "list.dash")
-                    }
-            }
-            Tab() {
-                UserProfile().tabItem {
-                    Label("Profile", systemImage: "square.and.pencil")
-                }
-            }
-        }
+        Menu()
+//            .environment(\.managedObjectContext, persistence.container.viewContext)
             .navigationBarBackButtonHidden(true)
-    }        
+            
+    }
 }
 
 #Preview {
